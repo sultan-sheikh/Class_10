@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
+
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+$primarycolor:#15a4fa;
+$secondarycolor:#2d3950;
+$bgcolor:#FFFFFF;
+%gradient{
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#48baff+50,5fc3ff+50 */
+background: rgb(72,186,255); /* Old browsers */
+background: -moz-linear-gradient(left,  rgba(72,186,255,1) 50%, rgba(95,195,255,1) 50%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  rgba(72,186,255,1) 50%,rgba(95,195,255,1) 50%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  rgba(72,186,255,1) 50%,rgba(95,195,255,1) 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48baff', endColorstr='#5fc3ff',GradientType=1 ); /* IE6-9 */
+
+
+}
+
+.navbar{
+	background-color: $bgcolor;
+	.navbar-nav{
+		padding:20px 0;
+		display:flex;
+		align-items: center;
+		.nav-item{
+			.nav-link{
+				font-size: 17px;
+				font-weight: 600;
+				text-transform: uppercase;
+				color: #2d3950;
+				transition: all .3s linear;
+
+			}
+			.nav-link:hover{
+					color:$primarycolor;
+				}
+		}
+	}
+}
+
+/*banner section start*/
+.banner-section{
+	background:url(../images/banner.png);
+	padding:30vh;
+	background-size:cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position:relative;
+
+	.banner-content{
+		h1{
+			    font-size: 130px;
+			    text-transform: uppercase;
+			    color: #fff;
+			    font-weight: 600;
+
+		}
+		span{
+			    	background:$primarycolor;
+			    	display:block;
+			    	height:2px;
+			    	width:100%;
+			    }
+		p{
+			  	color: white;
+			    font-size: 20px;
+			    padding-top:20px;
+			    padding-bottom: 30px;
+		}
+		a{
+				color: white;
+			    background: transparent;
+			    border: 1px solid #15a4fa;
+			    border-radius: 0 !important;
+			    padding: 15px 30px;
+			    transition: all .3s linear;
+		}
+		a:hover{
+			background:$primarycolor;
+		}
+
+		
+	}
+	.arrow{
+		bottom: 100px;
+	    left: 50%;
+	    position: absolute;
+	    transform: translate(-50%);
+	    color:white;
+	    text-decoration: none;
+	    font-size:22px;
+		transition: all .3s linear;
+	    &:hover{
+			color:$primarycolor;
+	    }
+	}
+}
+/*banner section end*/
+
+
+/*about section start*/
+.about-section{
+	padding:80px 0;
+	text-align:center;
+	h1{
+		font-size: 40px;
+    font-weight: 600;
+    color: #333;
+	}
+	p{
+		color: gray;
+    padding: 10px 50px;
+    font-weight: 500;
+    font-size: 20px;
+	}
+}
+
+/*about section end*/
+
+/*secvice section start*/
+.service-section{
+	padding-bottom: 100px;
+	padding-top:50px;
+	text-align: center;
+	background-color: $bgcolor;
+	.service-content{
+		.row{
+			justify-content: center;
+			.icon{
+				@extend %gradient;
+				width:105px;
+				height:110px;
+				display:block;
+				margin:auto;
+				color:#fff;
+				font-size:50px;
+				text-align: center;
+				line-height:110px;
+				i{
+					text-shadow: 2px 1px 3px black;
+				}
+
+			}
+			h3{
+				color: #333;
+				font-size: 25px;
+				font-weight: 600;
+				padding: 20px 0;
+				margin-bottom: 0;
+			}
+			p{
+				color: gray;
+				font-weight: 500;
+				margin-bottom:0;
+			}
+		}
+	}
+}
+/*secvice section end*/
+
+
+
+/*gallery section start*/
+.gallery-section{
+	padding:50px 0;
+	padding-bottom:80px;
+	.gallery-content{
+		text-align: center;
+		.row{
+			h1{
+				color: #333;
+			    font-size: 38px;
+			    font-weight: 600;
+			}
+			p{
+				color: #989595;
+			    font-size: 14px;
+			    font-weight: 600;
+			    padding: 10px 0;
+			    padding-bottom:50px;
+			}
+			.gallery-item{
+				position:relative;
+				overflow:hidden;
+				&:hover .overlay {
+					height:100%;
+				}
+				img{
+					width:100%;
+				}
+				.overlay{
+				    position: absolute;
+				    top: 0;
+				    height: 0;
+				    left: 0;
+				    right: 0;
+				    background: #1e90fff0;
+				    opacity: .9;
+				    transition: all .3s linear;
+				    overflow:hidden;
+				    .icons-overlay{
+				    	position:absolute;
+				    	top:45%;
+				    	left:45%;
+				    	background:orange;
+				    	color:#fff;
+				    	padding:10px 15px;
+				    }
+				    p{
+				    	color:white;
+				    	padding:0;
+				    	margin:0;
+				    	position:absolute;
+				    	top:50%;
+				    	left:50%;
+				    	transform:translateX(-50%);
+				    }
+
+				}
+
+			}
+		}
+	}
+}
+/*gallery section end*/
+
+
+
+/*form section start*/
+.form-section{
+	padding:100px 0;
+	background:url(../images/Strict.jpg);
+	background-blend-mode: multiply;
+	h2{
+		color: white;
+		font-size: 42px;
+		margin-bottom: 10px;
+		text-align: center;
+	}
+	p{
+		color: #d0cdcd;
+		text-align: center;
+		font-size: 15px;
+		padding-bottom: 25px;
+	}
+	.form-content{
+		overflow:hidden;
+		input,textarea{
+			font-size: 16px;
+			margin-bottom: 20px;
+			padding: 30px 20px;
+			background: none;
+			border: 1px solid #8e8e8e;
+		}
+		textarea{
+
+		}
+		.last-input{
+			color:red;
+		}
+		.form-check-input{
+			width: 30px;
+			height: 18px;
+			line-height: 20px;
+		}
+		.form-check-label{
+			color: white;
+			font-size: 18px;
+			margin-left: 17px;
+		}
+		.custom-btn{
+			color: white;
+			background: none;
+			padding: 10px 30px;
+			&:hover{
+				background:$primarycolor;
+			}
+		}
+	}
+}
+
+/*form section end*/
+
+
+
+/*footer sectin start*/
+footer{
+	padding:30px 0;
+	p{
+		    margin-bottom: 0;
+		    font-size: 16px;
+		    color: gray;
+	}
+	ul{
+		li{
+			a{
+				margin-left:10px;
+				background:$primarycolor;
+				color:#fff;
+				width:40px;
+				height:40px;
+				line-height: 40px;
+				display:block;
+				text-align:center;
+				transition:all .3s linear;
+				&:hover{
+					background:#fff;
+					border: 1px solid dodgerblue;
+				}
+			}
+		}
+	}
+}
+/*footer section end*/
+
+
+
+
+
+
+
+@media (max-width:1199px){
+		.banner-section{
+			.banner-content{
+			h1{
+				font-size: 70px;
+			}
+		}
+		}
+}
+@media (max-width:991px){
+	footer{
+		.row{
+			p{
+				text-align:center;
+			}
+			.last-div{
+				    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center !important;
+    padding-top: 20px;
+			}
+		}
+	}
+
+}
+@media (max-width:767px){
+	.service-section{
+		.service-content{
+			.row{
+				.col-lg{
+					padding-bottom:35px;
+				}
+			}
+		}
+	}
+
+}
+@media (max-width:575px){
+
+}
